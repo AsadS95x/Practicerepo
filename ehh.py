@@ -92,7 +92,7 @@ def add_student():
 
 def calculate_final(i):
         print (" ")
-        print (" ***** Exam Results for ", slist[i], " *****")
+        print ("***** Exam Results for ", slist[i], " *****")
         print ("Homework score is ", hwscore[i], "out of 25")
         print ("Assessment score is ", asscore[i], "out of 50")
         print ("Exam score is ", examscore[i], "out of 100")
