@@ -84,7 +84,8 @@ the student (A, B, etc.)
         print(" ")
 
 def add_student():
-        slist.append(str(input("What the students name? ")))
+        print(" ")
+        slist.append(str(input("What is the students name? ")))
         hwscore.append(int(input(" What was your homework score? ")))
         asscore.append(int(input(" What was your assesment score? ")))
         examscore.append(int(input(" What was your exam score? ")))
