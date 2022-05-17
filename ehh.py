@@ -1,3 +1,7 @@
+# from file(ehh.py) ... import class_ranker(if you only need a specific function)
+# otherwise, if not using import ehh.class_ranker() to call the function
+
+
 def ehh(reply):
     if reply.upper() == 'Y':
         print ( "Wohooo!")
