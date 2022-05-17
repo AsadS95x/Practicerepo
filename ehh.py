@@ -51,6 +51,12 @@ def studentnames():
         count += 1
     print ("Students ",*namelist(), " are all awesome! ")
 
+  
+slist = []
+hwscore = []
+asscore = []
+examscore = []
+
 def class_ranker():
     '''
 The program should take the students name, 
@@ -67,37 +73,49 @@ Stretch goal: Include grade boundaries such
 that the program also outputs a grade for 
 the student (A, B, etc.)
     '''
-    slist = []
-    hwscore = []
-    asscore = []
-    examscore = []
+    for i in range(int(input("How many students are in your class? "))):
+        add_student()
 
-    for i in range(5):
-        sname = str(input("What the students name? "))
-        slist.append(sname)
+    for i in range( len(slist)):
+        print (" ")
+        perc = calculate_final(i)
+        print (" ")
+        print("Your grade band for this year is: ",calculate_gradeband(perc))
+        print(" ")
+
+def add_student():
+        slist.append(str(input("What the students name? ")))
         hwscore.append(int(input(" What was your homework score? ")))
         asscore.append(int(input(" What was your assesment score? ")))
         examscore.append(int(input(" What was your exam score? ")))
-        print (" ")
 
-
-    for i in range( len(slist) ):
+def calculate_final(i):
         print (" ")
-        print (" *****Exam Results for ", slist[i], " *****")
+        print (" ***** Exam Results for ", slist[i], " *****")
         print ("Homework score is ", hwscore[i], "out of 25")
         print ("Assessment score is ", asscore[i], "out of 50")
         print ("Exam score is ", examscore[i], "out of 100")
         print (" ")
         finalscore = hwscore[i]+asscore[i]+examscore[i]
-        print (slist[i], "your Final Mark is: ", finalscore,) 
-        print (" at ", (int(finalscore)/175),"%")
+        finalpercent = (finalscore/175)*100
+        print ("Your Final Mark is: ", finalscore,) 
+        print (" at ", int(finalpercent),"%")
+        return finalpercent
 
-    
-
-def finalmark(student, homework, assement, exam):
-    for i in len(student):
-        print (i)
-        print ("Homework Score:", homework[i]) 
+def calculate_gradeband(fp):
+    if fp >= 85:
+        band="A*"
+    elif fp >= 70 and fp <= 84:
+        band="A"
+    elif fp >= 65 and fp <= 69:
+        band="B*"
+    elif fp >= 60 and fp <= 64:
+        band="B"
+    elif fp >= 50 and fp <= 59:
+        band="C"
+    else:
+        band="FAIL!"
+    return band
 
 class_ranker()
 
