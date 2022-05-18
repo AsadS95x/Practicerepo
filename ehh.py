@@ -54,7 +54,6 @@ def studentnames():
         print("Student ", namelist[count], " is awesome!")
         count += 1
     print ("Students ",*namelist(), " are all awesome! ")
-
   
 slist = []
 hwscore = []
