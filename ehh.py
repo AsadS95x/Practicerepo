@@ -124,7 +124,6 @@ def calculate_gradeband(fp):
 
 class_ranker()
 
-
-    
+   
 
    
