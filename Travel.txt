@@ -2,4 +2,4 @@ Did this work???
 ************Travel************
 initial deposit        1000.00
                         -15.00
-Total: 985.00
+        Total: 985.00         

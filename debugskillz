@@ -1,0 +1,15 @@
+import pdb
+
+pdb.set_trace()
+
+a = "aaa"
+b = "bbb"
+c = "ccc"
+
+final = a + b + c
+print(final)
+# Now when you run the program it will show the line,
+#  a = "aaa". If you try entering p a, you will 
+# get an error as you have to pass the line for 
+# the variable to be defined so type in n and press 
+# enter. Then try p a again, you should get a return of 'aaa'.

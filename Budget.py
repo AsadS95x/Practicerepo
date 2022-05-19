@@ -14,7 +14,7 @@ class BudgetApp:
             line_amount = "{:>7.2f}".format(item["amount"])
             # Truncate purchaserecord description and amount to 23 and 7 characters respectively
             purchaserecord += "{}{}\n".format(line_description[:23], line_amount[:7])
-        total = "Total: {:.2f}".format(self.__balance)
+        total = "Total: {:.2f}".format(self.__balance).center(30)
 
         print("\n Written to ", self.description, ".txt")
         fn =self.description+".txt"
