@@ -37,7 +37,7 @@ class BudgetApp:
             self.__balance -= amount
             return True
         else:
-            print("Tried to withdraw ", amount, ". You don't have the necessary funds in your account")
+            print("Tried to withdraw ", amount, ". You don't have the necessary funds in your account", self.description)
             return False
 
     def get_balance(self):
@@ -55,25 +55,5 @@ class BudgetApp:
             return True
         else:
             return False
-
-
-
-
-food = BudgetApp("Food")
-food.deposit(1000, "initial deposit")
-food.withdraw(10.15, "groceries")
-food.withdraw(15.89, "restaurant and more food for dessert")
-# print(food.get_balance())
-clothing = BudgetApp("Clothing")
-food.transfer(50, clothing)
-clothing.withdraw(25.55)
-clothing.withdraw(100)
-travel = BudgetApp("Travel")
-travel.deposit(1000, "initial deposit")
-travel.withdraw(15)
-
-print(food)
-print(clothing)
-print(travel)
 
 
