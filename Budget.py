@@ -37,7 +37,8 @@ class BudgetApp:
             self.__balance -= amount
             return True
         else:
-            print("Tried to withdraw ", amount, ". You don't have the necessary funds in your account", self.description)
+            self.purchaserecord.append({"amount": amount, "description": "Withdraw Cancelled"})
+            self.purchaserecord.append({"amount": 0, "description": "Not enough funds"})
             return False
 
     def get_balance(self):

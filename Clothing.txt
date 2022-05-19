@@ -2,4 +2,6 @@ Did this work???
 ***********Clothing***********
 Transfer from Food       50.00
                         -25.55
+Not enough funds        100.00
+Withdraw Cancelled        0.00
 Total: 24.45
