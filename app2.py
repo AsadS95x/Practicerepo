@@ -13,6 +13,13 @@ file = open("teams.txt", "w")
 file.write("Rocks\nLakers\nHeat\nCavliers\nWarriors\n")
 file.close
 
+file = open("teams.txt", "r")
+var1 = file.readlines()
+file.close
+for i in var1:
+        if i==var1[0] or i==var1[3]:
+            print("Team 1 and Team 4")
+            print (i)
 
 #Create a new Python file which does the following:
 #Edits your "teams.txt" file so that the top line is replaced with "This is a new line".
