@@ -4,7 +4,7 @@ class BudgetApp:
         self.purchaserecord = []
         self.__balance = 0.0
 
-    '''
+    
     def __repr__(self):
         header = self.description.center(30, "*") + "\n"
         purchaserecord = ""
@@ -15,8 +15,17 @@ class BudgetApp:
             # Truncate purchaserecord description and amount to 23 and 7 characters respectively
             purchaserecord += "{}{}\n".format(line_description[:23], line_amount[:7])
         total = "Total: {:.2f}".format(self.__balance)
+
+        print("\n Written to ", self.description, ".txt")
+        fn =self.description+".txt"
+        # print(fn)
+        file = open(fn, "w")
+        file.write("Did this work???\n")
+        file.write(header + purchaserecord + total)
+        file.close
+
         return header + purchaserecord + total
-        '''
+        
 
     def deposit(self, amount, description=""):
         self.purchaserecord.append({"amount": amount, "description": description})
