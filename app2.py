@@ -41,5 +41,3 @@ var1 = file.readlines()
 file.close
 for i in var1:
        print(i)
-
-
