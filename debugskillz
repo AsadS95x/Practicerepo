@@ -12,4 +12,28 @@ print(final)
 #  a = "aaa". If you try entering p a, you will 
 # get an error as you have to pass the line for 
 # the variable to be defined so type in n and press 
-# enter. Then try p a again, you should get a return of 'aaa'.
+# enter. Then try p a again, you should get a return of 'aaa'. 
+# Now if you type q and press enter you will quit the program.
+
+# Now run the program again go the final line by typing n 
+# and enter repeatedly. Now type p final and you should 
+# get aaabbbccc returned.
+
+
+
+# Note: pdb.set_trace() will not trace within functions unless
+#  it is called within the function's block of code:
+import pdb
+a = "aaa"
+b = "bbb"
+c = "ccc"
+
+def final(var1,var2,var3):
+    pdb.set_trace()
+    return(var1+var2+var3)
+
+print(final(a,b,c))
+
+## This will follow the return line in the declaration
+#  of final and once again when it is called 
+# by the print function.
